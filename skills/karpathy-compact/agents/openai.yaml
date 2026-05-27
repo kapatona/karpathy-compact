@@ -1,0 +1,11 @@
+# Optional Codex metadata. Only SKILL.md is required to run the skill;
+# this file adds UI metadata and invocation policy for OpenAI Codex.
+# Schema: https://developers.openai.com/codex/skills
+interface:
+  display_name: "Karpathy Compact"
+  short_description: "Reduce common LLM coding mistakes: minimal, surgical, verified changes."
+
+policy:
+  # true = Codex may apply it automatically on coding tasks (matches the SKILL.md triggers).
+  # Set to false to require explicit `$karpathy-compact` invocation only.
+  allow_implicit_invocation: true
